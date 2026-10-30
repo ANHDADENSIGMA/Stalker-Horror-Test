@@ -1,0 +1,17 @@
+The Stalker: Six Nights 0.4.1 source patch (based on supplied v0.4.0)
+
+Implemented in source:
+- Passive Watcher retaliates against the player who damages it and enters chase state.
+- Baby Stalkers are passive until attacked; they then target and chase the attacker. They remain mortal.
+- Watcher story spawns are no longer invulnerable / AI-disabled, so retaliation is possible.
+- Added original paranoia ambience OGG, randomly played while the player is alone (no stalker within 34 blocks) and not being chased.
+- Existing chase music and chase-only fog behavior retained.
+- Supplied Runner/Watcher/Mimic GLB files are included as source assets.
+
+Not completed:
+- GLB files are not yet connected to Minecraft entity rendering. They require conversion to Java/Blockbench entity models or a custom GLTF renderer.
+- The existing PNG Baby Stalker artwork has not been recolored; source images remain unchanged.
+- Window encounter reliability, disappearance jumpscare timing, and denser chase fog have not been changed in this patch.
+
+Verification:
+- Source changes were made, but no Gradle executable/wrapper is present in this environment; Forge compilation and in-game testing were not performed. Build with the repository's GitHub Actions / Gradle 8.x Java 17 setup and send the first complete compiler error if it fails.
